@@ -1,0 +1,219 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body full width */
+body {
+  text-align: center;
+  font-family:Cinzel;
+  background-color: #fff;
+  color: black;
+  width: 100%;
+  background-image: url('images/nycthing2.jpg');
+
+  background-repeat:no-repeat;
+
+  background-size:cover;
+}
+
+/* container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+h1 {
+ font-size: 50px;
+}
+
+nav {
+  width: auto;
+  margin-top: 10px;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Button Style */
+.btn {
+    background-color: rgb(166, 218, 255);
+    padding: 10px 20px;
+    color: #000000; /* Dark gray text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sname {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgba(1,1,1,0.7);
+}
+
+#sname a {
+    font-weight: bold;
+    transition: all 700ms;
+}
+    
+#sname a:hover {
+    font-size:21px;
+    font-size-adjust: 10px;
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #gallery-1152 {
+        padding: var(--sectionPadding);
+    }
+    #gallery-1152 .cs-container {
+        width: 100%;
+        /* changes to 1280px at large desktop */
+        max-width: 59rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #gallery-1152 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #gallery-1152 .cs-topper {
+        color: #767676;
+    }
+    #gallery-1152 .cs-title {
+        margin: 0;
+    }
+    #gallery-1152 .cs-gallery {
+        width: 100%;
+        /* changes to 100% at tablet */
+        max-width: 31.25rem;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+    }
+    #gallery-1152 .cs-image {
+        /* 260px - 360px */
+        min-height: clamp(16.25rem, 60vw, 20rem);
+        border-radius: 1rem;
+        /* clips the image corners */
+        overflow: hidden;
+        display: block;
+        grid-column: span 12;
+        grid-row: span 1;
+        position: relative;
+    }
+    #gallery-1152 .cs-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* makes it act like a background image */
+        object-fit: cover;
+    }
+}
+/* Tablet - 700px */
+@media only screen and (min-width: 43.75rem) {
+    #gallery-1152 .cs-gallery {
+        max-width: 100%;
+        grid-template-rows: 1fr;
+    }
+    #gallery-1152 .cs-image {
+        grid-column: span 4;
+    }
+    #gallery-1152 .cs-image:nth-of-type(4),
+    #gallery-1152 .cs-image:nth-of-type(5) {
+        grid-column: span 6;
+    }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #gallery-1152 .cs-container {
+        max-width: 80rem;
+    }
+    #gallery-1152 .cs-gallery {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    #gallery-1152 .cs-image {
+        grid-column: span 1;
+    }
+    #gallery-1152 .cs-image:nth-of-type(4),
+    #gallery-1152 .cs-image:nth-of-type(5) {
+        grid-column: span 1;
+    }
+}
+
+li {
+    padding-left: 80px;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+    background-color: rgb(166, 218, 255);
+  }
+
+  .footpad{
+    padding-top: 10px;
+  }

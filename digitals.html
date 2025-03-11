@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <title>Digitals</title>
+</head>
+<body>    
+
+
+    <div id="page-container">
+        <div id="content-wrap">
+
+
+
+            <header> 
+                <nav>
+                    <h1><a href="index.html">Roman Shubin</a></h1>
+                        <ul id="sname">
+                            <li><a href="digitals.html">Digitals</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>    
+                </nav>
+            </header>
+            <main>
+                <div class="container">
+
+         <section id="gallery-1152">
+            <div class="cs-container">
+                <div class="cs-gallery">
+                    <!--Picture 1-->
+                    <picture class="cs-image">
+                        <source media="(max-width: 600px)" srcset="images/DSC_0004.jpeg">
+                        <source media="(min-width: 601px)" srcset="images/DSC_0004.jpeg">
+                        <img loading="lazy" decoding="async" src="images/DSC_0004.jpeg" alt="gallery" width="272" height="320">
+                    </picture>
+                    <!--Picture 2-->
+                    <picture class="cs-image">
+                        <source media="(max-width: 600px)" srcset="images/DSC_0015.jpeg">
+                        <source media="(min-width: 601px)" srcset="images/DSC_0015.jpeg">
+                        <img loading="lazy" decoding="async" src="images/DSC_0015.jpeg" alt="gallery" width="272" height="320">
+                    </picture>
+                    <!--Picture 3-->
+                    <picture class="cs-image">
+                        <source media="(max-width: 600px)" srcset="images/DSC_1136.jpeg">
+                        <source media="(min-width: 601px)" srcset="images/DSC_1136.jpeg">
+                        <img loading="lazy" decoding="async" src="images/DSC_1136.jpeg" alt="gallery" width="272" height="320">
+                    </picture>
+                    <!--Picture 4-->
+                    <picture class="cs-image">
+                        <source media="(max-width: 600px)" srcset="images/DSC_1156.jpeg">
+                        <source media="(min-width: 601px)" srcset="images/DSC_1156.jpeg">
+                        <img loading="lazy" decoding="async" src="images/DSC_1156.jpeg" alt="gallery" width="272" height="320">
+                    </picture>
+                    <!--Picture 5-->
+                    <picture class="cs-image">
+                        <source media="(max-width: 600px)" srcset="images/DSC_1167.jpeg">
+                        <source media="(min-width: 601px)" srcset="images/DSC_1167.jpeg">
+                        <img loading="lazy" decoding="async" src="images/DSC_1167.jpeg" alt="gallery" width="272" height="320">
+                    </picture>
+                    <!--Picture 6-->
+                    <picture class="cs-image">
+                        <source media="(max-width: 600px)" srcset="images/DSC_0027.jpeg">
+                        <source media="(min-width: 601px)" srcset="images/DSC_0027.jpeg">
+                        <img loading="lazy" decoding="async" src="images/DSC_0027.jpeg" alt="gallery" width="272" height="320">
+                    </picture>
+                    
+                </div>
+            </div>
+
+            <button class="btn" id="downloadAll">Download digitals</button>
+                <p>(Note: you have to click save for each individual photo.)</p>
+            </section>
+                                        
+            <script>
+                document.getElementById('downloadAll').addEventListener('click', function() {
+                    const images = document.querySelectorAll('img');
+                    images.forEach(img => {
+                        const link = document.createElement('a');
+                        link.href = img.src;
+                        link.download = img.dataset.filename;
+                        link.click();
+                    });
+                });
+            </script>
+
+
+
+        </div>
+            <footer id="footer">
+                <p class="footpad">2025 romanshubin.com</p>
+            </footer>
+    </div>
+
+
+</body>
+</html>
